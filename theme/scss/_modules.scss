@@ -1,0 +1,117 @@
+/**
+ *
+ * @author: Alessandro Bellini <hello@ilmente.com>
+ *
+ */
+
+.clearfix {
+    clear: both;
+}
+
+.description {
+    color: $colorTextAlt;
+}
+
+.meta {
+    display: block;
+    color: $colorTextAlt;
+    text-indent: 0;
+}
+
+.note-full .meta {
+    text-align: right;
+
+    time {
+        display: block;
+    }
+}
+
+.viewer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    figure {
+        margin: 1% 0;
+    }
+
+    &.rows-1 figure,
+    &.last-1 figure:last-child {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    &.rows-2 figure,
+    &.last-2 figure:last-child,
+    &.last-2 figure:nth-last-child(2) {
+        flex-basis: 48%;
+        max-width: 48%;
+    }
+
+    &.rows-3 figure,
+    &.last-3 figure:last-child,
+    &.last-3 figure:nth-last-child(2),
+    &.last-3 figure:nth-last-child(3) {
+        flex-basis: 31%;
+        max-width: 31%;
+
+        @include viewport($phone) {
+            flex-basis: 48%;
+            max-width: 48%;
+        }
+    }
+
+    &.rows-3 figure:last-child,
+    &.last-3 figure:last-child {
+        @include viewport($phone) {
+            flex-basis: 100%;
+            max-width: 100%;
+        }
+    }
+
+    &.rows-4 figure,
+    &.last-4 figure:last-child,
+    &.last-4 figure:nth-last-child(2),
+    &.last-4 figure:nth-last-child(3),
+    &.last-4 figure:nth-last-child(4) {
+        flex-basis: 23%;
+        max-width: 23%;
+
+        @include viewport($phone) {
+            flex-basis: 48%;
+            max-width: 48%;
+        }
+    }
+}
+
+.viewer-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: $lineHeight;
+    box-sizing: border-box;
+    background-color: $colorBg; 
+    overflow-y: auto;
+
+    &.is-visible {
+        display: block;
+    }
+}
+
+.viewer-close {
+    display: block;
+    text-align: right;
+    margin: 0 0 $lineHeight 0;
+}
+
+.viewer-image {
+    max-width: 1024px;
+    max-height: 1024px;
+}
+
+
+

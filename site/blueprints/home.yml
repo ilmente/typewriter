@@ -1,0 +1,12 @@
+title: Home
+pages: false
+files: false
+icon: home
+deletable: false
+fields:
+  title:
+    label: Title
+    type: text
+  text:
+    label: Text
+    type: markdown

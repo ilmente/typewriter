@@ -1,0 +1,20 @@
+title: Note
+pages: false
+files: true
+icon: sticky-note
+fields:
+  title:
+    label: Title
+    type: title
+    width: 3/5
+  date:
+    label: Date
+    type: date
+    width: 2/5
+    default: today
+  tags:
+    label: Tags
+    type: tags
+  text:
+    label: Text
+    type:  markdown

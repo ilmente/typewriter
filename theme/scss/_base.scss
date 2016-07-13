@@ -1,0 +1,107 @@
+/**
+ *
+ * @author: Alessandro Bellini <hello@ilmente.com>
+ *
+ */
+
+* {
+    outline: none;
+}
+
+::selection {
+    background-color: $colorAlt;
+}
+
+html {
+    font-size: $fontSize;
+}
+
+body {
+    background-color: $colorBg;
+    font-family: $fontMain;
+    font-size: 1rem;
+    line-height: $lineHeight;
+    color: $colorText;
+    overflow-x: hidden;
+}
+
+p {
+    margin: $lineHeight 0;
+    text-indent: $textIndent;
+}
+
+@each $i in $headers {
+    h#{$i} {
+        margin: $lineHeight*2 0 $lineHeight 0;
+        text-align: center;
+
+        &:before {
+            content: generate-decoration($i);
+            padding: 0 1ch 0 0;
+        }
+
+        &:after {
+            content: generate-decoration($i);
+            padding: 0 0 0 1ch;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $colorMain;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    text-decoration: underline;
+}
+
+small {
+    font-size: 0.8rem;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+figcaption {
+    margin: 0 0 1% 0;
+    text-align: center;
+    color: $colorTextAlt;
+}
+
+ul, ol {
+    display: block;
+    margin: $lineHeight 0;
+
+    &.is-plain li:before {
+        content: none;
+    }
+}
+
+li {
+    display: list-item;
+}
+
+ul li {
+    padding: 0 0 0 0;
+
+    &:before {
+        content: '-';
+        padding: 0 1ch 0 0;
+    }
+}
+
+ol li {
+    margin: 0 0 0 2ch;
+    list-style: decimal;
+}

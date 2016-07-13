@@ -1,0 +1,11 @@
+title: Page
+pages: false
+files: true
+icon: file-text-o
+fields:
+  title:
+    label: Title
+    type: text
+  text:
+    label: Text
+    type: markdown

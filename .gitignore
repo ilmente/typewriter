@@ -1,0 +1,29 @@
+#
+# general
+#
+logs
+*.log
+pids
+*.pid
+*.seed
+lib-cov
+.grunt
+.lock-wscript
+build/Release
+node_modules
+.sass-cache
+
+#
+# ilmente.com
+#
+/assets
+/content
+/kirby
+/panel
+/thumbs
+/site/accounts
+/site/cache
+/site/config
+.htaccess
+index.php
+license.md

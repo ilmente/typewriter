@@ -1,0 +1,12 @@
+title: Notes
+pages: note
+files: false
+preview: false
+deletable: false
+options:
+  status: false
+icon: sticky-note-o
+fields:
+  title:
+    label: Title
+    type: title
