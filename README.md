@@ -1,8 +1,9 @@
-# typewriter
-## Kirby CMS minimal theme (ilmente.com)
+# typewriter (Kirby CMS minimal theme)
 
 My personal website [ilmente.com](http://ilmente.com) is based on Kirby CMS 
-and **this is the minimal theme I'm using there**.
+and **this is the minimal theme I'm using there**. 
+
+The theme is fully responsive.
 
 ### Requirements
 - `node.js` 6.0.0 or above
