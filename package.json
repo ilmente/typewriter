@@ -1,8 +1,8 @@
 {
   "private": true,
   "name": "typewriter",
-  "version": "1.0.0",
-  "description": "typewriter: kirby cms minimal theme (ilmente.com)",
+  "version": "2.0.0",
+  "description": "typewriter: Kirby CMS minimal theme (ilmente.com)",
   "main": "build.js",
   "scripts": {
     "dev": "node ./build.js --dev",

@@ -1,5 +1,6 @@
 /**
  *
+ * @name: typewriter
  * @author: Alessandro Bellini <hello@ilmente.com>
  *
  */

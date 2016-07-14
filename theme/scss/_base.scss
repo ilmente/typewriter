@@ -1,11 +1,13 @@
 /**
  *
+ * @name: typewriter
  * @author: Alessandro Bellini <hello@ilmente.com>
  *
  */
 
 * {
     outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 ::selection {
@@ -23,6 +25,10 @@ body {
     line-height: $lineHeight;
     color: $colorText;
     overflow-x: hidden;
+
+    &.is-viewer-mode {
+        overflow-y: hidden;
+    }
 }
 
 p {

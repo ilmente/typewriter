@@ -1,6 +1,7 @@
 /**
  *
- * @author: Alessandro Bellini <alessandro.bellini@spryker.com>
+ * @name: typewriter
+ * @author: Alessandro Bellini <hello@ilmente.com>
  *
  */
 

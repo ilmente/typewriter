@@ -1,15 +1,17 @@
 /**
  *
+ * @name: typewriter
  * @author: Alessandro Bellini <hello@ilmente.com>
  *
  */
 
 // colors
-$colorBg: #FFFFFF;
+$colorBg: #fafafa;
+$colorAltBg: rgba(0, 0, 0, 0.85);
 $colorText: #333333;
-$colorTextAlt: #BBBBBB;
-$colorMain: #B92C25;
-$colorAlt: #FFF7A3;
+$colorTextAlt: #bbbbbb;
+$colorMain: #b92c25;
+$colorAlt: #fff7a3;
 
 // fonts
 $fontMain: 'TwR', 'Courier', monospace;
@@ -24,5 +26,6 @@ $pageWidth: 38rem;
 $headers: 1 2 3 4 5 6;
 
 // viewports
+$tablet: 750px;
 $phone: 540px;
 

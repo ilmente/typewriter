@@ -1,26 +1,50 @@
 /**
  *
+ * @name: typewriter
  * @author: Alessandro Bellini <hello@ilmente.com>
  *
  */
 
 'use strict'
 
-import dom from 'jquery'
+import $ from 'jquery'
 
-let viewerFigure = dom('.viewer figure')
-let viewerContainer = dom('.viewer-container')
-let viewerImage = dom('.viewer-image')
+let $body = $('body')
+let $previews = $('.grid figure')
+let $image = $('.viewer-image')
+let $caption = $('.viewer-caption')
 
-viewerFigure.on('click', e => {
-    viewerImage.get().setAttribute('src', e.target.getAttribute('src'))
-    viewerImage.get().nextSibling.innerText = ''
-    
-    if (e.target.nextSibling) {
-        viewerImage.get().nextSibling.innerText = e.target.nextSibling.innerText
+function showImage($preview){
+    let $previewImage = $preview.children('img')
+    $previews.removeClass('is-current')
+    $preview.addClass('is-current')
+    $image.attr('src', $previewImage.attr('src'))
+    $caption.text('').text($previewImage.next().text())
+    $body.addClass('is-viewer-mode')
+}
+
+function showImageHandler() {
+    showImage($(this))
+    return false
+}
+
+function closeViewerHandler() {
+    $previews.removeClass('is-current')
+    $body.removeClass('is-viewer-mode')
+    return false
+}
+
+function getChangeImageHandler(showNext) {
+    return () => {
+        let index = $previews.index($('.grid figure.is-current')) + (showNext ? 1 : -1)
+        index = (index < 0) ? $previews.length - 1 : index
+        index = (index >= $previews.length) ? 0 : index
+        showImage($previews.eq(index))
+        return false
     }
-    
-    viewerContainer.addClass('is-visible')
-})
+}
 
-viewerContainer.on('click', e => viewerContainer.removeClass('is-visible'))
+$previews.on('click', showImageHandler)
+$('.viewer').on('click', closeViewerHandler)
+$('.viewer-prev').on('click', getChangeImageHandler(false))
+$('.viewer-next').on('click', getChangeImageHandler(true))

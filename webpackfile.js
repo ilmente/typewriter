@@ -1,5 +1,6 @@
 /**
  *
+ * @name: typewriter
  * @author: Alessandro Bellini <hello@ilmente.com>
  *
  */
@@ -21,7 +22,10 @@ let config = {
     },
     resolve: {
         root: path.join(cwd, '/theme'),
-        extensions: ['', '.js', '.scss']
+        extensions: ['', '.js', '.scss'],
+        alias: {
+            jquery: 'jquery/dist/jquery.slim.js'
+        }
     },
     module: {
         loaders: [{
