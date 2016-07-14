@@ -18,7 +18,7 @@ const style = new ExtractTextPlugin('[name].css')
 let config = {
     cwd: cwd,
     entry: {
-        ilmente: [path.join(cwd, '/theme/entry.js')]
+        typewriter: [path.join(cwd, '/theme/entry.js')]
     },
     resolve: {
         root: path.join(cwd, '/theme'),

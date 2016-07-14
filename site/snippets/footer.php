@@ -4,6 +4,6 @@
             </footer>
         </div>
 
-        <?php echo js('assets/ilmente.js') ?>
+        <?php echo js('assets/typewriter.js') ?>
     </body>
 </html>

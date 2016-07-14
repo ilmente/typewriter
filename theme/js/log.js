@@ -15,5 +15,5 @@ const style = {
 
 console.log('%cHello, code explorer!', style.header)
 console.log('%cIf you want to actually take a look under the hood, go on github:', style.text)
-console.log('%chttps://github.com/ilmente/ilmente.com', style.link)
+console.log('%chttps://github.com/ilmente/typewriter', style.link)
 
