@@ -8,4 +8,4 @@
         <?php echo css('assets/css/typewriter.css') ?>
         <title><?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?></title>
     </head>
-    <body data-component="log">
+    <body>

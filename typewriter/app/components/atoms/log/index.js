@@ -1,7 +1,7 @@
 'use strict';
 
 import $ from 'jquery';
-import Component from '../component';
+import Component from 'component';
 import { register } from 'lib/app';
 
 const style = {

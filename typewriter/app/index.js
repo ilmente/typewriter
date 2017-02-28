@@ -10,6 +10,7 @@
 import $ from 'jquery';
 import * as app from 'lib/app';
 
-import './components/log'
+import './components/atoms/log'
+import './components/organisms/viewer'
 
 $(document).ready(app.init);

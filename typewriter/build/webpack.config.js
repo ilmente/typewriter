@@ -51,7 +51,8 @@ let config = {
         modules: ['node_modules', settings.paths.sourcePath],
         extensions: ['.js', '.css', '.scss'],
         alias: {
-            lib: path.join(settings.paths.sourceDir, 'lib')
+            lib: path.join(settings.paths.sourceDir, 'lib'),
+            component: path.join(settings.paths.sourceDir, 'app/components/atoms/component')
         }
     },
 
