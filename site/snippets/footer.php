@@ -4,6 +4,6 @@
             </footer>
         </div>
 
-        <?php echo js('assets/typewriter.js') ?>
+        <?php echo js('assets/js/typewriter.js') ?>
     </body>
 </html>

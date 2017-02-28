@@ -7,5 +7,5 @@
 
 'use strict'
 
-import 'js/main'
-import 'scss/main'
+import './app/style'
+import './app'
