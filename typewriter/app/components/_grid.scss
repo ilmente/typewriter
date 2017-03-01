@@ -1,0 +1,75 @@
+/**
+ *
+ * @name: typewriter
+ * @author: Alessandro Bellini <hello@ilmente.com>
+ *
+ */
+
+.c-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    figure {
+        margin: 1% 0;
+
+        img {
+            cursor: pointer;
+        }
+
+        figcaption {
+            @include viewport($tablet) {
+                display: none;
+            }
+        }
+    }
+
+    &__rows-1 figure,
+    &__last-1 figure:last-child {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    &__rows-2 figure,
+    &__last-2 figure:last-child,
+    &__last-2 figure:nth-last-child(2) {
+        flex-basis: 48%;
+        max-width: 48%;
+    }
+
+    &__rows-3 figure,
+    &__last-3 figure:last-child,
+    &__last-3 figure:nth-last-child(2),
+    &__last-3 figure:nth-last-child(3) {
+        flex-basis: 31%;
+        max-width: 31%;
+
+        @include viewport($phone) {
+            flex-basis: 48%;
+            max-width: 48%;
+        }
+    }
+
+    &__rows-3 figure:last-child,
+    &__last-3 figure:last-child {
+        @include viewport($phone) {
+            flex-basis: 100%;
+            max-width: 100%;
+        }
+    }
+
+    &__rows-4 figure,
+    &__last-4 figure:last-child,
+    &__last-4 figure:nth-last-child(2),
+    &__last-4 figure:nth-last-child(3),
+    &__last-4 figure:nth-last-child(4) {
+        flex-basis: 23%;
+        max-width: 23%;
+
+        @include viewport($phone) {
+            flex-basis: 48%;
+            max-width: 48%;
+        }
+    }
+}

@@ -11,7 +11,7 @@
 }
 
 ::selection {
-    background-color: $colorAlt;
+    background-color: $colorTextSelection;
 }
 
 html {
@@ -25,32 +25,12 @@ body {
     line-height: $lineHeight;
     color: $colorText;
     overflow-x: hidden;
-
-    &.is-viewer-mode {
-        overflow-y: hidden;
-    }
 }
 
-p {
-    margin: $lineHeight 0;
-    text-indent: $textIndent;
-}
-
-@each $i in $headers {
-    h#{$i} {
-        margin: $lineHeight*2 0 $lineHeight 0;
-        text-align: center;
-
-        &:before {
-            content: generate-decoration($i);
-            padding: 0 1ch 0 0;
-        }
-
-        &:after {
-            content: generate-decoration($i);
-            padding: 0 0 0 1ch;
-        }
-    }
+h1, h2, h3, h4, h5, h6 {
+    display: block;
+    margin: $lineHeight*2 0 $lineHeight 0;
+    text-decoration: underline;
 }
 
 a {
@@ -66,8 +46,8 @@ em {
     font-style: italic;
 }
 
-strong {
-    text-decoration: underline;
+strong, mark {
+    background-color: $colorTextSelection;
 }
 
 small {
@@ -85,13 +65,14 @@ figcaption {
     color: $colorTextAlt;
 }
 
+p {
+    margin: $lineHeight 0;
+    text-indent: $textIndent;
+}
+
 ul, ol {
     display: block;
     margin: $lineHeight 0;
-
-    &.is-plain li:before {
-        content: none;
-    }
 }
 
 li {

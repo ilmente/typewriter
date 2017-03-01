@@ -1,0 +1,31 @@
+/**
+ *
+ * @name: typewriter
+ * @author: Alessandro Bellini <hello@ilmente.com>
+ *
+ */
+
+.c-navigation {
+    @include clearfix;
+    float: right;
+    display: inline-block;
+    padding: 0 0 0 $lineHeight;
+
+    &__menu {
+        display: inline-block;
+        text-align: right;
+    }
+
+    &__item {
+        &::before {
+            content: none;
+        }
+    }
+
+    &__link {
+        &.is-active {
+            color: $colorText;
+            text-decoration: none;
+        }
+    }
+}

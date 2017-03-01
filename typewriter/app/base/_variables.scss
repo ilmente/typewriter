@@ -6,24 +6,27 @@
  */
 
 // colors
-$colorBg: #fafafa;
-$colorAltBg: rgba(0, 0, 0, 0.85);
-$colorText: #333333;
-$colorTextAlt: #bbbbbb;
 $colorMain: #b92c25;
 $colorAlt: #fff7a3;
 
+$colorBg: #fbfbfb;
+$colorBgAlt: rgba(0, 0, 0, 0.85);
+
+$colorText: #333333;
+$colorTextAlt: #bbbbbb;
+$colorTextSelection: #fff7a3;
+
 // fonts
 $fontMain: 'TwR', 'Courier', monospace;
-$fontSize: 110%;
-$lineHeight: 1.4rem;
+$fontSize: 130%;
+$lineHeight: 1.3rem;
 $textIndent: 3ch;
 
 // page
 $pageWidth: 38rem;
 
-// headers
-$headers: 1 2 3 4 5 6;
+// headings
+$headings: 1 2 3 4 5 6;
 
 // viewports
 $tablet: 750px;

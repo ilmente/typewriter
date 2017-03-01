@@ -39,7 +39,7 @@ let config = {
     watch: settings.options.isWatching,
 
     entry: {
-        typewriter: path.resolve('./typewriter/app/index.js')
+        typewriter: path.resolve('./typewriter/index.js')
     },
 
     output: {
@@ -52,7 +52,7 @@ let config = {
         extensions: ['.js', '.css', '.scss'],
         alias: {
             lib: path.join(settings.paths.sourceDir, 'lib'),
-            component: path.join(settings.paths.sourceDir, 'app/components/atoms/component')
+            component: path.join(settings.paths.sourceDir, 'app/components/component')
         }
     },
 

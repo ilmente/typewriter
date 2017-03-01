@@ -5,18 +5,17 @@
  *
  */
 
-@function generate-decoration($n) {
-    $decoration: '';
-    
-    @for $i from 1 through $n {
-        $decoration: $decoration + '~';
-    }
-
-    @return $decoration;
-}
-
 @mixin viewport($device) {
     @media screen and (max-width: $device) {
         @content;
     }
 }
+
+@mixin clearfix {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+

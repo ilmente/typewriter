@@ -1,8 +1,7 @@
 <?php snippet('header') ?>
-<?php snippet('frame') ?>
 
-<section class="content page">
+<main role="main">
     <?php echo $page->text()->kirbytext() ?> 
-</section>
+</main>
 
 <?php snippet('footer') ?>

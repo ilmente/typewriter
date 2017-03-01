@@ -1,0 +1,21 @@
+/**
+ *
+ * @name: typewriter
+ * @author: Alessandro Bellini <hello@ilmente.com>
+ *
+ */
+ 
+.c-footer {
+    margin: $lineHeight*3 0;
+    text-align: center;
+    color: $colorTextAlt;
+
+    @include viewport($phone) {
+        margin-bottom: $lineHeight;
+    }
+
+    p {
+        margin: 0;
+        text-indent: 0;
+    }
+}
