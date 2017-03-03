@@ -1,84 +1,55 @@
-# Kirby
+# typewriter (Kirby CMS minimal theme)
 
-Kirby is a file-based CMS.
-Easy to setup. Easy to use. Flexible as hell.
+My personal website [ilmente.com](http://ilmente.com) is based on Kirby CMS 
+and **this is the minimal theme I'm using there**. 
 
-## Trial
-
-You can try Kirby on your local machine or on a test
-server as long as you need to make sure it is the right
-tool for your next project.
-
-## Buy a license
-
-You can purchase your Kirby license at
-<https://getkirby.com/buy>
-
-A Kirby license is valid for a single domain. You can find
-Kirby's license agreement here: <https://getkirby.com/license>
-
-## The Starterkit
-
-Kirby's Starterkit comes with a small demo website and a fully
-configured panel. Feel free to modify it and play with it as
-much as you like.
-
-There's also the [Langkit](https://github.com/getkirby/langkit.git)
-in case you need a multi-language installation.
-
-## The Panel
-
-You can find the login for Kirby's admin interface at
-http://yourdomain.com/panel. You will be guided through the signup
-process for your first user, when you visit the panel
-for the first time.
-
-## Installation
-
-Kirby does not require a database, which makes it very easy to
-install. Just copy Kirby's files to your server and visit the
-URL for your website in the browser.
-
-**Please check if the invisible .htaccess file has been
-copied to your server correctly**
+The theme is fully responsive.
 
 ### Requirements
+- `node.js` 6.0.0 or above
+- Kirby CMS 2.4.1 or above
 
-Kirby runs on PHP 5.4+, Apache or Nginx.
+### Setup
+Download this repo on your local machine.
+Move this repo content into your Kirby site root.
+Then:
 
-### Download
+``` bash
+# install the dependencies
+npm install
 
-You can download the latest version of the Starterkit
-from https://download.getkirby.com
+# build the theme
+npm run build 
 
-### With Git
+# build the theme in developmente mode
+# watching for changes over the assets 
+npm run build:dev
 
-If you are familiar with Git, you can clone Kirby's
-Starterkit repository from Github.
+# build the theme in production mode
+# optimising and compressing the code
+npm run build:prod
+```
 
-    git clone https://github.com/getkirby/starterkit.git
+### Blog (notes)
+If you want te enable the blog in this theme, create a page called `notes` with no parents.
+Then go edit it and add as many notes as you want: each one of them is a blog post, shown in the homepage.
 
-## Documentation
+### Image viewer
+This theme provides a simple image viewer (with a little grid system).
+When you create a page, add this tag: 
 
-<https://getkirby.com/docs>
+```
+(viewer: all columns: 4 last: 2)
+```
 
-## Issues and feedback
+where:
 
-If you have a Github account, please report issues
-directly on Github:
+- `viewer` enable the viewer
+- `columns` create a grid with columns of <n> (1-4) elements
+- `last` creates a grid with the **last** column of <n> (1-4) elements
 
-- <https://github.com/getkirby/kirby/issues>
-- <https://github.com/getkirby/panel/issues>
-- <https://github.com/getkirby/starterkit/issues>
+Automatically, when you'll click on these images, you'll get a full page viewer to see/navigate them.
 
-Otherwise you can use Kirby's forum: https://forum.getkirby.com
-or send us an email: <support@getkirby.com>
+---
 
-## Support
-
-<https://getkirby.com/support>
-
-## Copyright
-
-© 2009-2016 Bastian Allgeier (Bastian Allgeier GmbH)
-<http://getkirby.com>
+*Enjoy! :)*

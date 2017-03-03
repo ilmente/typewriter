@@ -1,37 +1,7 @@
-# System files
-# ------------
-
-Icon
-.DS_Store
-
-# Temporary files
-# ---------------
-
-/thumbs/*
-!/thumbs/index.html
-
-/site/cache/*
-!/site/cache/index.html
-
-# -------------SECURITY-------------
-# NEVER publish these files via Git!
-# -------------SECURITY-------------
-
-# Kirby accounts
-# ---------------
-
-/site/accounts/*
-!/site/accounts/index.html
-
-# Avatars
-# ---------------
-
-/assets/avatars/*
-!/assets/avatars/index.html
-
 #
-# general
+# ==> general
 #
+
 logs
 *.log
 pids
@@ -43,10 +13,13 @@ lib-cov
 build/Release
 node_modules
 .sass-cache
+Icon
+.DS_Store
 
 #
-# ilmente.com
+# ==> typewriter
 #
+
 /assets
 /content
 /kirby
@@ -58,5 +31,3 @@ node_modules
 /site/controllers
 .htaccess
 index.php
-license.md
-readme.md
