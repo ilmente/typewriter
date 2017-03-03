@@ -22,13 +22,17 @@ webpack(configuration, (error, stats) => {
         console.log('output:\n' + output);
     }
 
+    let message = 'done';
+    let consoleFn = 'log';
+
     if (stats.hasErrors()) {
-        console.error('done with errors');
-    } else {
-        console.log('done');
+        message += ' with errors';
+        consoleFn = 'error';
     }
 
     if (configuration.watch) {
-        console.log('watching...');
+        message += ', watching...';
     }
+
+    console[consoleFn].apply(console, [message]);
 });
