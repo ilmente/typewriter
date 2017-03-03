@@ -6,70 +6,71 @@
  */
 
 .c-grid {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    &__row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        padding: 1ch;
+    }
 
-    figure {
-        margin: 1% 0;
+    &__figure {
+        padding: 1ch;
+        cursor: pointer;
+    }
 
-        img {
-            cursor: pointer;
-        }
-
-        figcaption {
-            @include viewport($tablet) {
-                display: none;
-            }
+    &__caption {
+        @include viewport($tablet) {
+            display: none;
         }
     }
 
-    &__rows-1 figure,
-    &__last-1 figure:last-child {
+    &--cols-1 &__figure,
+    &--last-1 &__figure:last-child {
         flex-basis: 100%;
         max-width: 100%;
     }
 
-    &__rows-2 figure,
-    &__last-2 figure:last-child,
-    &__last-2 figure:nth-last-child(2) {
-        flex-basis: 48%;
-        max-width: 48%;
+    &--cols-2 &__figure,
+    &--last-2 &__figure:last-child,
+    &--last-2 &__figure:nth-last-child(2) {
+        flex-basis: 50%;
+        max-width: 50%;
     }
 
-    &__rows-3 figure,
-    &__last-3 figure:last-child,
-    &__last-3 figure:nth-last-child(2),
-    &__last-3 figure:nth-last-child(3) {
-        flex-basis: 31%;
-        max-width: 31%;
+    &--cols-3 &__figure,
+    &--last-3 &__figure:last-child,
+    &--last-3 &__figure:nth-last-child(2),
+    &--last-3 &__figure:nth-last-child(3) {
+        flex-basis: 33%;
+        max-width: 33%;
 
         @include viewport($phone) {
-            flex-basis: 48%;
-            max-width: 48%;
+            flex-basis: 50%;
+            max-width: 50%;
         }
     }
 
-    &__rows-3 figure:last-child,
-    &__last-3 figure:last-child {
+    &--cols-3 &__figure:last-child,
+    &--last-3 &__figure:last-child {
         @include viewport($phone) {
             flex-basis: 100%;
             max-width: 100%;
         }
     }
 
-    &__rows-4 figure,
-    &__last-4 figure:last-child,
-    &__last-4 figure:nth-last-child(2),
-    &__last-4 figure:nth-last-child(3),
-    &__last-4 figure:nth-last-child(4) {
-        flex-basis: 23%;
-        max-width: 23%;
+    &--cols-4 &__figure,
+    &--last-4 &__figure:last-child,
+    &--last-4 &__figure:nth-last-child(2),
+    &--last-4 &__figure:nth-last-child(3),
+    &--last-4 &__figure:nth-last-child(4) {
+        flex-basis: 25%;
+        max-width: 25%;
 
         @include viewport($phone) {
-            flex-basis: 48%;
-            max-width: 48%;
+            flex-basis: 50%;
+            max-width: 50%;
         }
     }
 }

@@ -51,6 +51,7 @@ let config = {
         modules: ['node_modules', settings.paths.sourcePath],
         extensions: ['.js', '.css', '.scss'],
         alias: {
+            jquery: 'jquery/dist/jquery.slim.js',
             lib: path.join(settings.paths.sourceDir, 'lib'),
             component: path.join(settings.paths.sourceDir, 'app/components/component')
         }
