@@ -1,0 +1,62 @@
+
+.c-viewer {
+    &__main-view {
+        max-width: $page-width;
+        margin: auto;
+        padding: 0 $font-line-height*2;
+        z-index: 1;
+
+        @include viewport($bp-phone) {
+           padding: 0 $font-line-height;
+        }
+    }
+
+    &__display-view {
+        @include transition(opacity);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: $font-line-height*2;
+        pointer-events: none;
+        background-color: $color-bg-display;
+        text-align: center;
+        opacity: 0;
+        overflow: hidden;
+        overflow-y: auto;
+        z-index: 2;
+
+        @include viewport($bp-phone) {
+           padding: $font-line-height;
+        }
+
+        padding-bottom: 8ch;
+    }
+
+    &__image {
+        display: block;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
+
+    &__text {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 3ch;
+        width: 100%;
+        text-align: center;
+    }
+
+    &.is-display {
+        overflow: hidden;
+    }
+
+    &.is-display &__display-view {
+        pointer-events: auto;
+        opacity: 1;
+    }
+
+}

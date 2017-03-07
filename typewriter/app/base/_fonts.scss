@@ -6,9 +6,9 @@
  */
 
 @font-face {
-  font-family: 'TwR';
-  font-style: normal;
-  font-weight: 400;
+  font-family: $font-family-main;
+  font-style: $font-style;
+  font-weight: $font-weight;
   src: url('../fonts/twr.otf') format('truetype');
 }
 

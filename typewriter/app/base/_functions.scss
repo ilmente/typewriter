@@ -19,3 +19,13 @@
     }
 }
 
+@mixin transition($props: all, $duration: 300ms, $ease: ease-in-out) {
+  $transition: null;
+
+  @each $prop in $props {
+    $transition: $prop $duration $ease, $transition
+  }
+
+  transition: $transition;
+}
+

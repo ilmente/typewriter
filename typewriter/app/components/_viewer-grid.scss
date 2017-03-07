@@ -17,11 +17,10 @@
 
     &__figure {
         padding: 1ch;
-        cursor: pointer;
     }
 
     &__caption {
-        @include viewport($tablet) {
+        @include viewport($bp-tablet) {
             display: none;
         }
     }
@@ -46,7 +45,7 @@
         flex-basis: 33%;
         max-width: 33%;
 
-        @include viewport($phone) {
+        @include viewport($bp-phone) {
             flex-basis: 50%;
             max-width: 50%;
         }
@@ -54,7 +53,7 @@
 
     &--cols-3 &__figure:last-child,
     &--last-3 &__figure:last-child {
-        @include viewport($phone) {
+        @include viewport($bp-phone) {
             flex-basis: 100%;
             max-width: 100%;
         }
@@ -68,7 +67,7 @@
         flex-basis: 25%;
         max-width: 25%;
 
-        @include viewport($phone) {
+        @include viewport($bp-phone) {
             flex-basis: 50%;
             max-width: 50%;
         }

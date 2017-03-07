@@ -7,9 +7,9 @@
  
 .c-header {
     @include clearfix;
-    margin: $lineHeight*2 0;
+    margin: $font-line-height*2 0;
 
-    @include viewport($phone) {
+    @include viewport($bp-phone) {
         margin-top: 0;
     }
 
@@ -25,6 +25,6 @@
     }
 
     &__tagline {
-        color: $colorTextAlt;
+        color: $color-text-alt;
     }
 }

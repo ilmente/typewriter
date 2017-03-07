@@ -11,8 +11,8 @@
         <title><?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?></title>
     </head>
     
-    <body>
-        <div class="c-layout">
+    <body class="c-viewer" data-component="viewer">
+        <div class="c-viewer__main-view">
             <header class="c-header" role="header">
                 <ul class="c-header__info"> 
                     <li class="c-header__title"><?php echo $site->title()->html() ?></li>

@@ -6,12 +6,12 @@
  */
  
 .c-footer {
-    margin: $lineHeight*3 0;
+    margin: $font-line-height*2 0;
     text-align: center;
-    color: $colorTextAlt;
+    color: $color-text-alt;
 
-    @include viewport($phone) {
-        margin-bottom: $lineHeight;
+    @include viewport($bp-phone) {
+        margin-bottom: $font-line-height;
     }
 
     p {

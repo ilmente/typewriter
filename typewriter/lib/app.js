@@ -61,7 +61,6 @@ export function getComponentByKey(key) {
 
 export function init() {
     let components = mountAllRegisteredComponents();
-
     components.forEach(component => component.init());
 }
 

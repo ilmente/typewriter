@@ -6,27 +6,31 @@
  */
 
 // colors
-$colorMain: #b92c25;
-$colorAlt: #fff7a3;
+$color-main: #b92c25;
+$color-alt: #fff7a3;
 
-$colorBg: #fbfbfb;
-$colorBgAlt: rgba(#000000, 0.85);
-$colorBgViewer: rgba(#000000, 0.025);
+$color-bg: #fbfbfb;
+$color-bg-display: rgba($color-bg, 0.95);
 
-$colorText: #333333;
-$colorTextAlt: #bbbbbb;
-$colorTextSelection: #fff7a3;
+$color-text: #333333;
+$color-text-alt: #bbbbbb;
+$color-text-selection: #fff7a3;
 
-// fonts
-$fontMain: 'TwR', 'Courier', monospace;
-$fontSize: 130%;
-$lineHeight: 1.3rem;
-$textIndent: 3ch;
+// font
+$font-family-main: 'twr';
+$font-family: $font-family-main, 'Courier', monospace;
+$font-size: 130%;
+$font-weight: 400;
+$font-style: 400;
+$font-line-height: 1.3rem;
+
+// text
+$text-indent: 3ch;
 
 // page
-$pageWidth: 38rem;
+$page-width: 38rem;
 
-// viewports
-$tablet: 750px;
-$phone: 540px;
+// viewport breakpoints
+$bp-tablet: 750px;
+$bp-phone: 540px;
 
